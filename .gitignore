@@ -1,0 +1,47 @@
+# .gitignore do REPOSITORIO PUBLICO deste artigo.
+# src/ e espelhado para paper-<venue>-<assunto>; o .gitignore do monorepo nao vai
+# junto, entao o que protege segredo e peso de modelo la fora e este arquivo.
+
+# Segredos: so o exemplo vai ao ar
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv*/
+venv*/
+env/
+ENV/
+**/.venv*/
+
+# Node
+node_modules/
+
+# Pesos de modelo e caches de ML (regeneraveis rodando o codigo)
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+*.h5
+*.pkl
+*.joblib
+.cache/
+transformers_cache/
+**/models/cache/
+**/models/trained/
+
+# Logs e temporarios
+*.log
+logs/
+*.tmp
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/

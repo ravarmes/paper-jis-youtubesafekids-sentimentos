@@ -1,0 +1,33 @@
+{
+  "total": 2749,
+  "n_titulos": 240,
+  "n_videos": 227,
+  "n_franquias": 51,
+  "categorias_frases": {
+    "adulta": 945,
+    "educativa": 609,
+    "narrativa": 1110,
+    "classica": 85
+  },
+  "rotulos_por_categoria": {
+    "adulta": {
+      "Negativo": 726,
+      "Neutro": 180,
+      "Positivo": 39
+    },
+    "educativa": {
+      "Neutro": 250,
+      "Positivo": 357,
+      "Negativo": 2
+    },
+    "narrativa": {
+      "Neutro": 558,
+      "Positivo": 491,
+      "Negativo": 61
+    },
+    "classica": {
+      "Negativo": 83,
+      "Positivo": 2
+    }
+  }
+}

@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "Can Caregivers Trust the Score? Auditing the Signals of a Sentiment-Based Re-ranker for Children's Video Search"
+abstract: >-
+  Code and data that reproduce every result of the article: the training recipe of the
+  YouTube Safe Kids sentiment classifier, the rules that assign franchise and content
+  category to each corpus sentence, the two evaluation protocols, and the analyses of
+  generalisation, demotion by content category, calibration, deferral and robustness.
+type: software
+# Os termos diferem por componente -- ver LICENSE. O CFF admite um valor so,
+# entao vai o que cobre o codigo, e o LICENSE e que e autoritativo.
+license: MIT
+repository-code: "https://github.com/ravarmes/paper-jis-youtubesafekids-sentimentos"
+authors:
+  - family-names: "Vargas Mesquita dos Santos"
+    given-names: "Rafael"
+    orcid: "https://orcid.org/0009-0003-2915-7642"
+    affiliation: "Instituto Federal do Espírito Santo"
+    email: "rafaelv@ifes.edu.br"
+  - family-names: "de Salles"
+    given-names: "João Victor"
+    affiliation: "Instituto Federal do Espírito Santo"
+  - family-names: "Izo"
+    given-names: "Flávio"
+    orcid: "https://orcid.org/0000-0001-7189-0387"
+    affiliation: "Instituto Federal do Espírito Santo"
+  - family-names: "Vargas"
+    given-names: "Sabrina"
+    affiliation: "Faculdade do Espírito Santo (UNES)"
+keywords:
+  - children's content
+  - search result re-ranking
+  - calibration
+  - selective prediction
+  - human-AI interaction
+  - Brazilian Portuguese
+preferred-citation:
+  type: article
+  title: "Can Caregivers Trust the Score? Auditing the Signals of a Sentiment-Based Re-ranker for Children's Video Search"
+  journal: "Journal on Interactive Systems"
+  year: 2026
+  notes: >-
+    Manuscript under review. The reference and the DOI will be filled in on
+    acceptance.
+  authors:
+    - family-names: "Vargas Mesquita dos Santos"
+      given-names: "Rafael"
+      orcid: "https://orcid.org/0009-0003-2915-7642"
+    - family-names: "de Salles"
+      given-names: "João Victor"
+    - family-names: "Izo"
+      given-names: "Flávio"
+      orcid: "https://orcid.org/0000-0001-7189-0387"
+    - family-names: "Vargas"
+      given-names: "Sabrina"

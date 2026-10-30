@@ -1,0 +1,826 @@
+{
+  "esquemas": {
+    "frase": {
+      "n": 2722,
+      "acuracia": 0.7880235121234387,
+      "f1_macro": 0.7908976540392033,
+      "f1_neg": 0.8767772511848342,
+      "recall_neg": 0.8624708624708625,
+      "precisao_neg": 0.891566265060241,
+      "f1_neu": 0.7507507507507507,
+      "f1_pos": 0.745164960182025,
+      "erro_fronteira": 0.07641440117560618,
+      "ic_f1_macro": [
+        0.7636831140519044,
+        0.815760227246925
+      ],
+      "ic_recall_neg": [
+        0.8160719132386474,
+        0.9026695836742763
+      ],
+      "unidade_bootstrap": "video",
+      "por_categoria": {
+        "adulta": {
+          "n": 931,
+          "rotulos": [
+            712,
+            180,
+            39
+          ],
+          "preditos": [
+            683,
+            198,
+            50
+          ],
+          "taxa_pred_neg": 0.7336197636949516,
+          "taxa_rotulo_neg": 0.7647690655209453,
+          "n_neg": 712,
+          "recall_neg": 0.9115168539325843,
+          "precisao_neg": 0.9502196193265008,
+          "n_pred_neg": 683,
+          "n_acerto_neg": 649,
+          "falso_neg": 0.1552511415525114,
+          "n_falso_neg": 34,
+          "acuracia": 0.8614393125671321
+        },
+        "classica": {
+          "n": 85,
+          "rotulos": [
+            83,
+            0,
+            2
+          ],
+          "preditos": [
+            72,
+            8,
+            5
+          ],
+          "taxa_pred_neg": 0.8470588235294118,
+          "taxa_rotulo_neg": 0.9764705882352941,
+          "n_neg": 83,
+          "recall_neg": 0.8674698795180723,
+          "precisao_neg": 1.0,
+          "n_pred_neg": 72,
+          "n_acerto_neg": 72,
+          "falso_neg": 0.0,
+          "n_falso_neg": 0,
+          "acuracia": 0.8705882352941177
+        },
+        "narrativa": {
+          "n": 1097,
+          "rotulos": [
+            61,
+            546,
+            490
+          ],
+          "preditos": [
+            69,
+            584,
+            444
+          ],
+          "taxa_pred_neg": 0.06289881494986327,
+          "taxa_rotulo_neg": 0.05560619872379216,
+          "n_neg": 61,
+          "recall_neg": 0.29508196721311475,
+          "precisao_neg": 0.2608695652173913,
+          "n_pred_neg": 69,
+          "n_acerto_neg": 18,
+          "falso_neg": 0.04922779922779923,
+          "n_falso_neg": 51,
+          "acuracia": 0.6818596171376481
+        },
+        "educativa": {
+          "n": 609,
+          "rotulos": [
+            2,
+            250,
+            357
+          ],
+          "preditos": [
+            6,
+            232,
+            371
+          ],
+          "taxa_pred_neg": 0.009852216748768473,
+          "taxa_rotulo_neg": 0.003284072249589491,
+          "n_neg": 2,
+          "recall_neg": null,
+          "precisao_neg": null,
+          "n_pred_neg": 6,
+          "n_acerto_neg": 1,
+          "falso_neg": 0.008237232289950576,
+          "n_falso_neg": 5,
+          "acuracia": 0.8555008210180624
+        }
+      }
+    },
+    "video": {
+      "n": 2722,
+      "acuracia": 0.7027920646583394,
+      "f1_macro": 0.7072891110353514,
+      "f1_neg": 0.8674839462930533,
+      "recall_neg": 0.865967365967366,
+      "precisao_neg": 0.8690058479532163,
+      "f1_neu": 0.6266944734098019,
+      "f1_pos": 0.627688913403199,
+      "erro_fronteira": 0.08339456282145481,
+      "ic_f1_macro": [
+        0.6746553829909666,
+        0.7387134350326375
+      ],
+      "ic_recall_neg": [
+        0.8164693981091917,
+        0.9078950661187504
+      ],
+      "unidade_bootstrap": "video",
+      "por_categoria": {
+        "adulta": {
+          "n": 931,
+          "rotulos": [
+            712,
+            180,
+            39
+          ],
+          "preditos": [
+            691,
+            179,
+            61
+          ],
+          "taxa_pred_neg": 0.7422126745435016,
+          "taxa_rotulo_neg": 0.7647690655209453,
+          "n_neg": 712,
+          "recall_neg": 0.9157303370786517,
+          "precisao_neg": 0.9435600578871202,
+          "n_pred_neg": 691,
+          "n_acerto_neg": 652,
+          "falso_neg": 0.1780821917808219,
+          "n_falso_neg": 39,
+          "acuracia": 0.8528464017185822
+        },
+        "classica": {
+          "n": 85,
+          "rotulos": [
+            83,
+            0,
+            2
+          ],
+          "preditos": [
+            75,
+            5,
+            5
+          ],
+          "taxa_pred_neg": 0.8823529411764706,
+          "taxa_rotulo_neg": 0.9764705882352941,
+          "n_neg": 83,
+          "recall_neg": 0.9036144578313253,
+          "precisao_neg": 1.0,
+          "n_pred_neg": 75,
+          "n_acerto_neg": 75,
+          "falso_neg": 0.0,
+          "n_falso_neg": 0,
+          "acuracia": 0.9058823529411765
+        },
+        "narrativa": {
+          "n": 1097,
+          "rotulos": [
+            61,
+            546,
+            490
+          ],
+          "preditos": [
+            84,
+            551,
+            462
+          ],
+          "taxa_pred_neg": 0.07657247037374658,
+          "taxa_rotulo_neg": 0.05560619872379216,
+          "n_neg": 61,
+          "recall_neg": 0.2459016393442623,
+          "precisao_neg": 0.17857142857142858,
+          "n_pred_neg": 84,
+          "n_acerto_neg": 15,
+          "falso_neg": 0.06660231660231661,
+          "n_falso_neg": 69,
+          "acuracia": 0.5533272561531449
+        },
+        "educativa": {
+          "n": 609,
+          "rotulos": [
+            2,
+            250,
+            357
+          ],
+          "preditos": [
+            5,
+            207,
+            397
+          ],
+          "taxa_pred_neg": 0.008210180623973728,
+          "taxa_rotulo_neg": 0.003284072249589491,
+          "n_neg": 2,
+          "recall_neg": null,
+          "precisao_neg": null,
+          "n_pred_neg": 5,
+          "n_acerto_neg": 1,
+          "falso_neg": 0.006589785831960461,
+          "n_falso_neg": 4,
+          "acuracia": 0.7142857142857143
+        }
+      }
+    },
+    "serie": {
+      "n": 2722,
+      "acuracia": 0.7072005878030859,
+      "f1_macro": 0.71200068140287,
+      "f1_neg": 0.8513913558318531,
+      "recall_neg": 0.837995337995338,
+      "precisao_neg": 0.865222623345367,
+      "f1_neu": 0.6431852986217458,
+      "f1_pos": 0.6414253897550112,
+      "erro_fronteira": 0.09221160911094783,
+      "ic_f1_macro": [
+        0.6664360928377633,
+        0.7494773934115491
+      ],
+      "ic_recall_neg": [
+        0.725941976897745,
+        0.8802452050929723
+      ],
+      "unidade_bootstrap": "serie",
+      "por_categoria": {
+        "adulta": {
+          "n": 931,
+          "rotulos": [
+            712,
+            180,
+            39
+          ],
+          "preditos": [
+            669,
+            185,
+            77
+          ],
+          "taxa_pred_neg": 0.7185821697099892,
+          "taxa_rotulo_neg": 0.7647690655209453,
+          "n_neg": 712,
+          "recall_neg": 0.8820224719101124,
+          "precisao_neg": 0.9387144992526159,
+          "n_pred_neg": 669,
+          "n_acerto_neg": 628,
+          "falso_neg": 0.1872146118721461,
+          "n_falso_neg": 41,
+          "acuracia": 0.8227712137486574
+        },
+        "classica": {
+          "n": 85,
+          "rotulos": [
+            83,
+            0,
+            2
+          ],
+          "preditos": [
+            72,
+            8,
+            5
+          ],
+          "taxa_pred_neg": 0.8470588235294118,
+          "taxa_rotulo_neg": 0.9764705882352941,
+          "n_neg": 83,
+          "recall_neg": 0.8674698795180723,
+          "precisao_neg": 1.0,
+          "n_pred_neg": 72,
+          "n_acerto_neg": 72,
+          "falso_neg": 0.0,
+          "n_falso_neg": 0,
+          "acuracia": 0.8705882352941177
+        },
+        "narrativa": {
+          "n": 1097,
+          "rotulos": [
+            61,
+            546,
+            490
+          ],
+          "preditos": [
+            80,
+            569,
+            448
+          ],
+          "taxa_pred_neg": 0.07292616226071102,
+          "taxa_rotulo_neg": 0.05560619872379216,
+          "n_neg": 61,
+          "recall_neg": 0.29508196721311475,
+          "precisao_neg": 0.225,
+          "n_pred_neg": 80,
+          "n_acerto_neg": 18,
+          "falso_neg": 0.059845559845559844,
+          "n_falso_neg": 62,
+          "acuracia": 0.5706472196900638
+        },
+        "educativa": {
+          "n": 609,
+          "rotulos": [
+            2,
+            250,
+            357
+          ],
+          "preditos": [
+            10,
+            221,
+            378
+          ],
+          "taxa_pred_neg": 0.016420361247947456,
+          "taxa_rotulo_neg": 0.003284072249589491,
+          "n_neg": 2,
+          "recall_neg": null,
+          "precisao_neg": 0.1,
+          "n_pred_neg": 10,
+          "n_acerto_neg": 1,
+          "falso_neg": 0.014827018121911038,
+          "n_falso_neg": 9,
+          "acuracia": 0.7536945812807881
+        }
+      }
+    }
+  },
+  "diferencas": {
+    "frase-video": {
+      "delta_f1_macro": 0.0836085430038519,
+      "ic": [
+        0.06155113990416037,
+        0.10652060790193539
+      ],
+      "delta_recall_neg": -0.0034965034965035446
+    },
+    "frase-serie": {
+      "delta_f1_macro": 0.07889697263633333,
+      "ic": [
+        0.05105037034449442,
+        0.10385757109105512
+      ],
+      "delta_recall_neg": 0.02447552447552448
+    }
+  },
+  "rebaixamento_videos": {
+    "frase": {
+      "adulta": {
+        "n_videos": 83,
+        "rebaixa_oraculo": 66,
+        "rebaixa_modelo": 65,
+        "rebaixa_modelo_nao_oraculo": 1,
+        "oraculo_nao_modelo": 2
+      },
+      "classica": {
+        "n_videos": 6,
+        "rebaixa_oraculo": 6,
+        "rebaixa_modelo": 6,
+        "rebaixa_modelo_nao_oraculo": 0,
+        "oraculo_nao_modelo": 0,
+        "videos_rebaixados": [
+          {
+            "video": "v010",
+            "rotulos": [
+              15,
+              0,
+              0
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v012",
+            "rotulos": [
+              15,
+              0,
+              0
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v102",
+            "rotulos": [
+              14,
+              0,
+              1
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v130",
+            "rotulos": [
+              15,
+              0,
+              0
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v138",
+            "rotulos": [
+              11,
+              0,
+              1
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v144",
+            "rotulos": [
+              13,
+              0,
+              0
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          }
+        ]
+      },
+      "narrativa": {
+        "n_videos": 92,
+        "rebaixa_oraculo": 4,
+        "rebaixa_modelo": 0,
+        "rebaixa_modelo_nao_oraculo": 0,
+        "oraculo_nao_modelo": 4,
+        "videos_rebaixados": [
+          {
+            "video": "v001",
+            "rotulos": [
+              9,
+              0,
+              3
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": false
+          },
+          {
+            "video": "v009",
+            "rotulos": [
+              7,
+              6,
+              2
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": false
+          },
+          {
+            "video": "v013",
+            "rotulos": [
+              9,
+              3,
+              3
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": false
+          },
+          {
+            "video": "v205",
+            "rotulos": [
+              13,
+              0,
+              2
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": false
+          }
+        ]
+      },
+      "educativa": {
+        "n_videos": 44,
+        "rebaixa_oraculo": 0,
+        "rebaixa_modelo": 0,
+        "rebaixa_modelo_nao_oraculo": 0,
+        "oraculo_nao_modelo": 0,
+        "videos_rebaixados": []
+      },
+      "_n_videos": 225
+    },
+    "video": {
+      "adulta": {
+        "n_videos": 83,
+        "rebaixa_oraculo": 66,
+        "rebaixa_modelo": 68,
+        "rebaixa_modelo_nao_oraculo": 3,
+        "oraculo_nao_modelo": 1
+      },
+      "classica": {
+        "n_videos": 6,
+        "rebaixa_oraculo": 6,
+        "rebaixa_modelo": 6,
+        "rebaixa_modelo_nao_oraculo": 0,
+        "oraculo_nao_modelo": 0,
+        "videos_rebaixados": [
+          {
+            "video": "v010",
+            "rotulos": [
+              15,
+              0,
+              0
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v012",
+            "rotulos": [
+              15,
+              0,
+              0
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v102",
+            "rotulos": [
+              14,
+              0,
+              1
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v130",
+            "rotulos": [
+              15,
+              0,
+              0
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v138",
+            "rotulos": [
+              11,
+              0,
+              1
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v144",
+            "rotulos": [
+              13,
+              0,
+              0
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          }
+        ]
+      },
+      "narrativa": {
+        "n_videos": 92,
+        "rebaixa_oraculo": 4,
+        "rebaixa_modelo": 2,
+        "rebaixa_modelo_nao_oraculo": 2,
+        "oraculo_nao_modelo": 4,
+        "videos_rebaixados": [
+          {
+            "video": "v001",
+            "rotulos": [
+              9,
+              0,
+              3
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": false
+          },
+          {
+            "video": "v009",
+            "rotulos": [
+              7,
+              6,
+              2
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": false
+          },
+          {
+            "video": "v013",
+            "rotulos": [
+              9,
+              3,
+              3
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": false
+          },
+          {
+            "video": "v051",
+            "rotulos": [
+              0,
+              0,
+              15
+            ],
+            "rebaixa_oraculo": false,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v092",
+            "rotulos": [
+              0,
+              9,
+              0
+            ],
+            "rebaixa_oraculo": false,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v205",
+            "rotulos": [
+              13,
+              0,
+              2
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": false
+          }
+        ]
+      },
+      "educativa": {
+        "n_videos": 44,
+        "rebaixa_oraculo": 0,
+        "rebaixa_modelo": 0,
+        "rebaixa_modelo_nao_oraculo": 0,
+        "oraculo_nao_modelo": 0,
+        "videos_rebaixados": []
+      },
+      "_n_videos": 225
+    },
+    "serie": {
+      "adulta": {
+        "n_videos": 83,
+        "rebaixa_oraculo": 66,
+        "rebaixa_modelo": 64,
+        "rebaixa_modelo_nao_oraculo": 1,
+        "oraculo_nao_modelo": 3
+      },
+      "classica": {
+        "n_videos": 6,
+        "rebaixa_oraculo": 6,
+        "rebaixa_modelo": 6,
+        "rebaixa_modelo_nao_oraculo": 0,
+        "oraculo_nao_modelo": 0,
+        "videos_rebaixados": [
+          {
+            "video": "v010",
+            "rotulos": [
+              15,
+              0,
+              0
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v012",
+            "rotulos": [
+              15,
+              0,
+              0
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v102",
+            "rotulos": [
+              14,
+              0,
+              1
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v130",
+            "rotulos": [
+              15,
+              0,
+              0
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v138",
+            "rotulos": [
+              11,
+              0,
+              1
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v144",
+            "rotulos": [
+              13,
+              0,
+              0
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": true
+          }
+        ]
+      },
+      "narrativa": {
+        "n_videos": 92,
+        "rebaixa_oraculo": 4,
+        "rebaixa_modelo": 2,
+        "rebaixa_modelo_nao_oraculo": 2,
+        "oraculo_nao_modelo": 4,
+        "videos_rebaixados": [
+          {
+            "video": "v001",
+            "rotulos": [
+              9,
+              0,
+              3
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": false
+          },
+          {
+            "video": "v009",
+            "rotulos": [
+              7,
+              6,
+              2
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": false
+          },
+          {
+            "video": "v013",
+            "rotulos": [
+              9,
+              3,
+              3
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": false
+          },
+          {
+            "video": "v051",
+            "rotulos": [
+              0,
+              0,
+              15
+            ],
+            "rebaixa_oraculo": false,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v154",
+            "rotulos": [
+              0,
+              0,
+              15
+            ],
+            "rebaixa_oraculo": false,
+            "rebaixa_modelo": true
+          },
+          {
+            "video": "v205",
+            "rotulos": [
+              13,
+              0,
+              2
+            ],
+            "rebaixa_oraculo": true,
+            "rebaixa_modelo": false
+          }
+        ]
+      },
+      "educativa": {
+        "n_videos": 44,
+        "rebaixa_oraculo": 0,
+        "rebaixa_modelo": 0,
+        "rebaixa_modelo_nao_oraculo": 0,
+        "oraculo_nao_modelo": 0,
+        "videos_rebaixados": []
+      },
+      "_n_videos": 225
+    }
+  },
+  "protocolo": {
+    "n_frases": 2722,
+    "n_grupos_video": 225,
+    "n_grupos_serie": 101,
+    "n_series_multivideo": 21,
+    "frases_series_multivideo": 1785,
+    "serie_fold_min": 284,
+    "serie_fold_max": 978,
+    "serie_fold_neg_min": 0.10915492957746478,
+    "serie_fold_neg_max": 0.40081799591002043,
+    "serie_treino_min": 1744
+  }
+}

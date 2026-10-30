@@ -29,5 +29,27 @@
       "Negativo": 83,
       "Positivo": 2
     }
+  },
+  "concordancia_negativo": {
+    "adulta": {
+      "n": 726,
+      "unanime": 460,
+      "tres_ou_mais": 726
+    },
+    "educativa": {
+      "n": 2,
+      "unanime": 1,
+      "tres_ou_mais": 2
+    },
+    "narrativa": {
+      "n": 61,
+      "unanime": 38,
+      "tres_ou_mais": 59
+    },
+    "classica": {
+      "n": 83,
+      "unanime": 54,
+      "tres_ou_mais": 83
+    }
   }
 }

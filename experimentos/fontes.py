@@ -176,6 +176,23 @@ def atribui_grupos(linhas: list[dict]) -> list[str]:
     return grupos
 
 
+ANOTADORES = ("P1", "A1", "A2", "A3")
+
+
+def concordancia_negativo(linhas: list[dict]) -> dict:
+    """Por categoria, quantas frases de rotulo final Negativo tiveram 4 e ao menos 3 votos Negativo."""
+    res: dict[str, dict[str, int]] = {}
+    for r in linhas:
+        if r["AS"].strip() != "Negativo":
+            continue
+        votos = sum(r[k].strip() == "Negativo" for k in ANOTADORES)
+        d = res.setdefault(fonte(r["TITULO"])[1], {"n": 0, "unanime": 0, "tres_ou_mais": 0})
+        d["n"] += 1
+        d["unanime"] += votos == len(ANOTADORES)
+        d["tres_ou_mais"] += votos >= 3
+    return res
+
+
 def main() -> None:
     prepara_saidas()
     with open(CORPUS, encoding="utf-8-sig") as fh:
@@ -223,6 +240,7 @@ def main() -> None:
         "rotulos_por_categoria": {
             c: dict(Counter(r["AS"].strip() for r in linhas if fonte(r["TITULO"])[1] == c)) for c in cat
         },
+        "concordancia_negativo": concordancia_negativo(linhas),
     }
     with open(RESULTADOS / "corpus_resumo.json", "w", encoding="utf-8") as fh:
         json.dump(resumo, fh, indent=2, ensure_ascii=False)

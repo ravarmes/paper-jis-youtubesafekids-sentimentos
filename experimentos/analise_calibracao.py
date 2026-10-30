@@ -171,7 +171,8 @@ def figura(curvas: dict, idioma: str = "en") -> None:
 
     T = TEXTO[idioma]
     p0, p1, y = curvas["p0"], curvas["p1"], curvas["y"]
-    fig, eixos = plt.subplots(1, 2, figsize=(7.0, 3.1))
+    # largura de uma coluna do template (3,4 pol.), em escala 1:1: o texto sai no tamanho declarado
+    fig, eixos = plt.subplots(2, 1, figsize=(3.4, 5.0))
     paineis = [
         (T["conf"], lambda p: (p.max(1), p.argmax(1) == y), T["acc"]),
         (T["adeq"], lambda p: (M.adequacao(p), M.ADEQ_ROTULO[y]), T["adeq_y"]),
@@ -187,16 +188,16 @@ def figura(curvas: dict, idioma: str = "en") -> None:
             ax.plot(xs, ys, marker=mk, c=cor, lw=1.2, ms=3.5, label=nome)
             for x_, y_, n_ in zip(xs, ys, ns):
                 if nome == T["cru"]:
-                    ax.annotate(str(n_), (x_, y_), textcoords="offset points", xytext=(3, -9), fontsize=6, color=cor)
+                    ax.annotate(str(n_), (x_, y_), textcoords="offset points", xytext=(3, -9), fontsize=6.5, color=cor)
         ax.set_xlim(0, 1.02)
         ax.set_ylim(0, 1.02)
-        ax.set_title(titulo, fontsize=8.5)
-        ax.set_xlabel(T["x"], fontsize=8)
+        ax.set_title(titulo, fontsize=8)
+        ax.set_xlabel(T["x"], fontsize=7.5)
         if idioma == "pt":
             virgula = FuncFormatter(lambda v, _: f"{v:.1f}".replace(".", ","))
             ax.xaxis.set_major_formatter(virgula)
             ax.yaxis.set_major_formatter(virgula)
-        ax.set_ylabel(ylab, fontsize=8)
+        ax.set_ylabel(ylab, fontsize=7.5)
         ax.tick_params(labelsize=7)
         ax.grid(alpha=0.25, lw=0.5)
     eixos[0].legend(fontsize=7, loc="upper left", frameon=False)

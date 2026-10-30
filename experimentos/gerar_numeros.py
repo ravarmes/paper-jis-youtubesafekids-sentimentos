@@ -158,6 +158,11 @@ def macros_corpus(m: Macros, corpus: dict) -> None:
     m("negInfantilN", inteiro(infantil_neg))
     m("infantilN", inteiro(infantil_n))
     m("negInfantilPct", pct(infantil_neg / infantil_n))
+    # concordancia dos quatro anotadores nos rotulos Negativo, por categoria
+    for c, d in corpus["concordancia_negativo"].items():
+        nome = letras(c)
+        m(f"cat{nome}NegUnanPct", pct(d["unanime"] / d["n"]))
+        m(f"cat{nome}NegTresMais", inteiro(d["tres_ou_mais"]))
 
     # Tabela 1: categoria x rotulo
     lin = [
@@ -308,14 +313,17 @@ def macros_generalizacao(m: Macros, g: dict) -> None:
             " predictions (only where there are at least ten), and share of non-Negative sentences"
             " predicted Negative (undue demotions). Video level: a video is demoted when the mean of"
             " its sentence probabilities favours Negative; the oracle applies the same rule to the"
-            " human labels, i.e.\\ it is what a perfect sentiment classifier would demote.",
+            " human labels, i.e.\\ it is what a perfect sentiment classifier would demote. Counts are"
+            " over the working corpus of \\clsNTrabalho{} sentences (Section~\\ref{sec:protR}), so"
+            " they differ slightly from Table~\\ref{tab:corpus}.",
             "O que o sinal de sentimento rebaixa, por categoria de conteúdo, na partição por vídeo."
             " Nível da frase: fração de frases preditas Negativo, precisão e recall dessas predições"
             " (só onde há pelo menos dez) e fração das frases não-Negativas preditas Negativo"
             " (rebaixamentos indevidos). Nível do vídeo: um vídeo é rebaixado quando a média das"
             " probabilidades das suas frases favorece Negativo; o oráculo aplica a mesma regra aos"
             " rótulos humanos, isto é, mostra o que um classificador de sentimento perfeito"
-            " rebaixaria.",
+            " rebaixaria. As contagens são sobre o corpus de trabalho de \\clsNTrabalho{} frases"
+            " (Seção~\\ref{sec:protR}), por isso diferem um pouco das da Tabela~\\ref{tab:corpus}.",
         )
         + "}\\label{tab:fontes}",
         "\\centering\\footnotesize\\setlength{\\tabcolsep}{4pt}",

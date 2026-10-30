@@ -197,19 +197,20 @@ def figura(s, erro, fronteira, idioma: str = "en") -> None:
         "desacordo": ("#67a9cf", ":"), "meio": ("#5aae61", "--"), "decisao": ("#2166ac", "-"),
     }
     estilo = {k: (rotulos[k], *cores[k]) for k in rotulos}
-    fig, eixos = plt.subplots(1, 2, figsize=(7.0, 3.1))
+    # largura de uma coluna do template (3,4 pol.), em escala 1:1: o texto sai no tamanho declarado
+    fig, eixos = plt.subplots(2, 1, figsize=(3.4, 5.0))
     ax = eixos[0]
     for nome in SINAIS:
         cob, risco, _ = M.risco_cobertura(s[nome], erro)
         rot, cor, ls = estilo[nome]
         ax.plot(cob, risco, c=cor, ls=ls, lw=1.2, label=rot)
     ax.axhline(erro.mean(), c="0.5", lw=0.8, ls=":")
-    ax.set_xlabel("Cobertura (fração de itens não marcados)" if pt else "Coverage (share of items not flagged)", fontsize=8.5)
-    ax.set_ylabel("Taxa de erro nos itens não marcados" if pt else "Error rate among unflagged items", fontsize=8.5)
-    ax.set_title("Risco–cobertura" if pt else "Risk–coverage", fontsize=9)
+    ax.set_xlabel("Cobertura (fração de itens não marcados)" if pt else "Coverage (share of items not flagged)", fontsize=7.5)
+    ax.set_ylabel("Erro nos não marcados" if pt else "Error rate, unflagged", fontsize=7.5)
+    ax.set_title("Risco–cobertura" if pt else "Risk–coverage", fontsize=8)
     ax.set_xlim(0.3, 1.0)
     ax.set_ylim(0, 0.32)
-    ax.tick_params(labelsize=7.5)
+    ax.tick_params(labelsize=7)
     ax.grid(alpha=0.25, lw=0.5)
 
     ax = eixos[1]
@@ -221,19 +222,21 @@ def figura(s, erro, fronteira, idioma: str = "en") -> None:
         cap = [f[: int(round(x * len(f)))].sum() / f.sum() for x in q]
         ax.plot(q, cap, c=cor, ls=ls, lw=1.2, label=rot)
     ax.plot(q, q, c="0.5", lw=0.8, ls=":", label="Marca aleatória" if pt else "Random flagging")
-    ax.set_xlabel("Orçamento de conferência (fração marcada)" if pt else "Review budget (share of items flagged)", fontsize=8.5)
-    ax.set_ylabel("Erros de fronteira capturados" if pt else "Boundary errors captured", fontsize=8.5)
-    ax.set_title("Erros caros enviados ao responsável" if pt else "Costly errors sent to the caregiver", fontsize=9)
-    ax.tick_params(labelsize=7.5)
+    ax.set_xlabel("Orçamento de conferência (fração marcada)" if pt else "Review budget (share of items flagged)", fontsize=7.5)
+    ax.set_ylabel("Erros de fronteira capturados" if pt else "Boundary errors captured", fontsize=7.5)
+    ax.set_title("Erros caros enviados ao responsável" if pt else "Costly errors sent to the caregiver", fontsize=8)
+    ax.tick_params(labelsize=7)
     ax.grid(alpha=0.25, lw=0.5)
-    ax.legend(fontsize=6.5, loc="lower right", frameon=False)
+    # legenda abaixo do painel: dentro dele, encobria as curvas
+    ax.legend(fontsize=6.5, loc="upper center", bbox_to_anchor=(0.45, -0.24), ncol=2, frameon=False,
+              handlelength=2.2, columnspacing=1.0)
     fig.tight_layout()
     if pt:
         virgula = FuncFormatter(lambda v, _: f"{v:.1f}".replace(".", ","))
         for a in eixos:
             a.xaxis.set_major_formatter(virgula)
             a.yaxis.set_major_formatter(virgula)
-    fig.savefig((FIGURAS_PT if pt else FIGURAS) / "fig-deferencia.pdf")
+    fig.savefig((FIGURAS_PT if pt else FIGURAS) / "fig-deferencia.pdf", bbox_inches="tight", pad_inches=0.02)
     plt.close(fig)
 
 

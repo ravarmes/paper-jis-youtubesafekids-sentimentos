@@ -19,6 +19,7 @@ authors:
     email: "rafaelv@ifes.edu.br"
   - family-names: "de Salles"
     given-names: "João Victor"
+    orcid: "https://orcid.org/0009-0004-8019-9829"
     affiliation: "Instituto Federal do Espírito Santo"
   - family-names: "Izo"
     given-names: "Flávio"
@@ -26,7 +27,8 @@ authors:
     affiliation: "Instituto Federal do Espírito Santo"
   - family-names: "Vargas"
     given-names: "Sabrina"
-    affiliation: "Faculdade do Espírito Santo (UNES)"
+    orcid: "https://orcid.org/0009-0000-1137-3804"
+    affiliation: "Instituto Federal do Espírito Santo"
 keywords:
   - children's content
   - search result re-ranking
@@ -48,8 +50,10 @@ preferred-citation:
       orcid: "https://orcid.org/0009-0003-2915-7642"
     - family-names: "de Salles"
       given-names: "João Victor"
+      orcid: "https://orcid.org/0009-0004-8019-9829"
     - family-names: "Izo"
       given-names: "Flávio"
       orcid: "https://orcid.org/0000-0001-7189-0387"
     - family-names: "Vargas"
       given-names: "Sabrina"
+      orcid: "https://orcid.org/0009-0000-1137-3804"

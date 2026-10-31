@@ -7,7 +7,7 @@ Duas analises do artigo precisam saber de onde vem cada frase:
   - a validacao agrupada (protocolo_agrupado.py) separa treino e teste por FRANQUIA,
     para medir o desempenho sobre series que o modelo nunca viu -- que e a situacao de
     toda busca real;
-  - a analise de quem e rebaixado (analise_fontes.py) cruza rotulo e predicao com a
+  - a analise de quem e rebaixado (analise_generalizacao.py) cruza rotulo e predicao com a
     CATEGORIA do conteudo.
 
 O corpus nao traz essa informacao: so o titulo. As regras abaixo a derivam do titulo,

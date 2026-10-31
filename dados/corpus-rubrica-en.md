@@ -8,9 +8,8 @@
 > applies to its own examples.
 
 Defines the three polarity classes of the `corpus.csv` corpus and what each one means, with
-an example. It is the scheme against which the four annotators labeled the 2,749 sentences,
-and it is also what the classes predicted by the model mean — the classes are the same on
-both sides.
+an example. It is the scheme against which four human annotators labeled the 2,749 sentences
+by hand, independently of one another.
 
 Each sentence receives exactly one class. The final label in the `AS` column is set by
 majority vote among the four individual labelings (`P1`, `A1`, `A2`, `A3`); in case of a
@@ -35,7 +34,6 @@ tie, the faculty member (`P1`) acts as arbiter.
 
 The unit of judgment is the **isolated sentence**, as it appears in the `FRASE` column —
 without the video, without the context of neighboring sentences and without the title. The
-choice is deliberate, and the article discusses what it costs: part of the classifier's
-errors come from utterances that can only be resolved in context.
+choice is deliberate.
 
 Ambiguous cases — above all humor and irony — underwent additional manual review.

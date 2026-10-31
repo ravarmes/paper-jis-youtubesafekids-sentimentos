@@ -41,7 +41,7 @@ versioned in `resultados/`, so every analysis can be re-run without retraining.
 
 | Path | Content |
 |---|---|
-| `dados/corpus.csv` | 2,749 sentences, each with four independent annotations (`P1`, `A1`–`A3`), the final label (`AS`), video code, video title and narrative position |
+| `dados/corpus.csv` | 2,749 sentences, each with four independent human annotations (`P1`, `A1`–`A3`), the final label (`AS`, majority vote), video code, video title and narrative position |
 | `dados/corpus-rubrica*.md` | annotation guidelines (Portuguese and English) |
 | `experimentos/treino.py` | training recipe of the deployed classifier, unchanged |
 | `experimentos/fontes.py` | explicit rules that assign franchise and content category |
@@ -56,7 +56,11 @@ versioned in `resultados/`, so every analysis can be re-run without retraining.
 The corpus is the one used to train YouTube Safe Kids. Its 2,749 sentences were transcribed
 from YouTube videos with the support of transcription tools (Clipto and NotebookLM); each row
 carries a video code (`VIDEO`), the video title and the position in the narrative (`PARTE`).
-A video can appear under more than one title (compilations split into numbered parts), so the
+The labels are human: four annotators (`P1`, `A1`–`A3`) labelled every sentence by hand and
+independently, following `dados/corpus-rubrica.md`, and the final label (`AS`) is their
+majority vote, with ties settled by `P1`. No automatic or AI tool took part in the annotation;
+the classifier is trained and evaluated on these labels, and none of its predictions is stored
+in the corpus. A video can appear under more than one title (compilations split into numbered parts), so the
 by-video partition groups sentences by `VIDEO`; `fontes.py` checks that every title belongs to a
 single video.
 

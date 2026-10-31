@@ -1,9 +1,8 @@
 # Rubrica de anotação — análise de sentimentos
 
 Define as três classes de polaridade do corpus `corpus.csv` e o que cada uma significa,
-com exemplo. É o esquema contra o qual os quatro anotadores rotularam as 2.749 sentenças,
-e é também o que os rótulos preditos pelo modelo querem dizer — as classes são as mesmas
-dos dois lados.
+com exemplo. É o esquema com que quatro anotadores humanos rotularam à mão, de forma
+independente, as 2.749 sentenças.
 
 Cada sentença recebe exatamente uma classe. O rótulo final da coluna `AS` sai por voto
 majoritário entre as quatro rotulagens individuais (`P1`, `A1`, `A2`, `A3`); em caso de
@@ -27,8 +26,7 @@ empate, o docente (`P1`) arbitra.
 
 A unidade de julgamento é a **sentença isolada**, como ela aparece na coluna `FRASE` —
 sem o vídeo, sem o contexto das sentenças vizinhas e sem o título. Essa escolha é
-deliberada e o artigo discute o que ela custa: parte dos erros do classificador vem de
-enunciados que só se resolvem em contexto.
+deliberada.
 
 Casos ambíguos — sobretudo humor e ironia — passaram por revisão manual adicional.
 
